@@ -1,0 +1,40 @@
+SCHEMA;
+userdetails -
+  {
+    name,
+    email,
+    phoneNo,
+  };
+photos -
+  {
+    url,
+    user,
+    name,
+    description,
+    createdAt,
+    lastUpdated,
+    tags,
+    flagUseStatus,
+  };
+
+INDEXES;
+userdetails -
+  {
+    email: 1,
+  };
+photos -
+  {
+    user: 1,
+    createdAt: -1,
+    flagUseStatus: 1,
+    name: 1,
+    tags: 1,
+    description: 1,
+  };
+
+SIDEBAR -
+  {
+    Photos,
+    Trash,
+    Albums,
+  };
